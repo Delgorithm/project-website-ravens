@@ -57,7 +57,10 @@ export default function Menu() {
   }, [isMenuOpen]);
 
   return (
-    <div className="menu-container" ref={container}>
+    <div
+      className={`fixed top-0 left-0 w-full transition-all duration-300 flex justify-between items-center ${isMenuOpen ? "z:-50 pointer-events-auto" : "z-30"}`}
+      ref={container}
+    >
       <div className="menu-bar">
         <div className="menu-logo">
           <Link href="/" className="font-ppEiko text-[#E5E5E5]">

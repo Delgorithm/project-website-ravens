@@ -12,8 +12,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={"antialiased"}>
-        <Menu />
-        {children}
+        <div className="fixed top-0 left-0 w-full z-50">
+          <Menu />
+        </div>
+        <div className="relative z-10">{children}</div>
       </body>
     </html>
   );
