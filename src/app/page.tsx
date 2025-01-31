@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Lenis from "lenis";
 import Header from "@/components/header";
 import Scene from "@/components/scene";
+import SectionWorks from "@/components/ui/section-works";
+import TextParallax from "@/components/text-parallax";
 
 export default function Home() {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -21,8 +23,12 @@ export default function Home() {
 
   return (
     <main>
-      <Header setActiveMenu={setActiveMenu} />
-      <Scene activeMenu={activeMenu} />
+      <div className="h-screen">
+        <Header setActiveMenu={setActiveMenu} />
+        <Scene activeMenu={activeMenu} />
+      </div>
+      <TextParallax />
+      <SectionWorks />
     </main>
   );
 }
