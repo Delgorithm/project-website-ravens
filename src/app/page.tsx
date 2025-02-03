@@ -7,6 +7,8 @@ import Scene from "@/components/scene";
 import SectionWorks from "@/components/ui/section-works";
 import TextParallax from "@/components/text-parallax";
 import HorizontalScroll from "@/components/horizontal-scroll";
+import Information from "@/components/ui/information";
+import Prestations from "@/components/ui/prestations";
 
 export default function Home() {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -31,6 +33,8 @@ export default function Home() {
       <TextParallax />
       <SectionWorks />
       <HorizontalScroll />
+      <Information />
+      <Prestations />
     </main>
   );
 }
