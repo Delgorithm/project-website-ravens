@@ -53,7 +53,7 @@ export default function SectionWorks() {
   return (
     <section className="h-[200vh] w-full relative mt-24">
       <div className="border-y-2">
-        <h2 className="flex items-center justify-between text-[110px] font-ppEiko font-thin text-[#F5F8F1] px-16">
+        <h2 className="flex items-center justify-between text-[110px] font-ppEiko font-thin text-[#F5F8F1] px-32">
           Travaux<span className="text-[30px]  mt-14">[01]</span>
         </h2>
       </div>

@@ -3,6 +3,8 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
+import { projects } from "./data";
 
 export default function HorizontalScroll() {
   const containerRef = useRef(null);
@@ -36,20 +38,104 @@ export default function HorizontalScroll() {
     <div ref={containerRef} className="h-screen flex w-[300%]">
       <section
         ref={panel1Ref}
-        className="flex h-screen w-screen bg-[#A5A387] will-change-transform"
+        className="h-screen w-screen will-change-transform grid grid-cols-4 grid-rows-3 gap-2 pl-8 py-24"
       >
-        <p>01</p>
+        <Image
+          src={projects[0].src}
+          className="col-start-2 w-3/4 mt-4"
+          width={100}
+          height={100}
+          alt="img"
+        />
+        <Image
+          src={projects[1].src}
+          width={100}
+          height={100}
+          alt="img"
+          className="row-span-2 col-start-4 w-4/6 mt-12"
+        />
+        <Image
+          src={projects[2].src}
+          width={100}
+          height={100}
+          alt="img"
+          className="row-span-2 row-start-2 w-4/5 mt-10"
+        />
+        <Image
+          src={projects[3].src}
+          width={100}
+          height={100}
+          alt="img"
+          className="row-span-2 col-start-3 row-start-2 w-full "
+        />
       </section>
 
-      <section ref={panel2Ref} className="flex h-screen w-screen bg-red-400 will-change-transform">
-        <p>02</p>
+      <section
+        ref={panel2Ref}
+        className="h-screen w-screen will-change-transform grid grid-cols-4 grid-rows-3 gap-2 py-24"
+      >
+        <Image
+          src={projects[4].src}
+          className="row-span-3 w-full mt-24"
+          width={100}
+          height={100}
+          alt="img"
+        />
+        <Image
+          src={projects[5].src}
+          width={100}
+          height={100}
+          alt="img"
+          className="row-span-2 col-start-2 row-start-2 w-5/6 mt-36"
+        />
+        <Image
+          src={projects[6].src}
+          width={100}
+          height={100}
+          alt="img"
+          className="col-start-3 row-start-1 w-1/2 mt-44"
+        />
+        <Image
+          src={projects[7].src}
+          width={100}
+          height={100}
+          alt="img"
+          className="row-span-3 col-start-4 row-start-1 w-7/12"
+        />
       </section>
 
       <section
         ref={panel3Ref}
-        className="flex h-screen w-screen bg-[#A5A387] will-change-transform"
+        className="h-screen w-screen will-change-transform grid grid-cols-4 grid-rows-3 gap-2 pr-8 py-24"
       >
-        <p>03</p>
+        <Image
+          src={projects[8].src}
+          className="row-span-2 w-3/4 mt-4"
+          width={100}
+          height={100}
+          alt="img"
+        />
+        <Image
+          src={projects[7].src}
+          width={100}
+          height={100}
+          alt="img"
+          className="row-span-2 col-start-2 row-start-2 w-4/6 mt-12"
+        />
+        <Image
+          src={projects[5].src}
+          width={100}
+          height={100}
+          alt="img"
+          className="row-span-3 col-start-3 row-start-1 w-4/5 mt-10"
+        />
+        <Image
+          src={projects[4].src}
+          width={100}
+          height={100}
+          alt="img"
+          className="row-span-2 col-start-4 row-start-1 w-full "
+        />
       </section>
     </div>
   );
